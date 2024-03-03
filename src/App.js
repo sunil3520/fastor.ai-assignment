@@ -1,7 +1,10 @@
+import AllRoutes from "./pages/AllRoutes";
+
+
 function App() {
   return (
     <div className="">
-     Welcome to Faster.ai assignment
+     <AllRoutes/>
     </div>
   );
 }
