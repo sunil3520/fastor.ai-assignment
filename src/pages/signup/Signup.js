@@ -11,11 +11,13 @@ const Signup = () => {
   const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [dialCode, setDidalCode] = useState("+91");
+
   const [isSignIn, setIsSignIn] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const AuthData = useSelector((store) => console.log(store.authReducer));
   console.log(AuthData, "AuthData");
+
 
   const handleInputChange = (e) => {
     let inputValue = e.target.value.replace(/\D/g, "");
