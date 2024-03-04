@@ -11,7 +11,7 @@ const Signup = () => {
     const [otpValues, setOtpValues] = useState(["", "", "", "", "", ""]);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [dialCode, setDidalCode] = useState("+91");
-  const [isSignIn,setIsSignIn] = useState(true);
+  const [isSignIn,setIsSignIn] = useState(false);
  const dispatch = useDispatch();
  const navigate = useNavigate();
  const AuthData = useSelector((store)=>console.log(store.authReducer))
