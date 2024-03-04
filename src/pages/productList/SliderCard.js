@@ -16,7 +16,7 @@ const products = useSelector((store)=>store.ProductReducer?.products)
     <div className='p-3'>
       <h1 className='text-3xl font-bold mb-5'>Your taste</h1>
       <div className='flex gap-4 overflow-x-scroll no-scrollbar ' >
-        {products.map((imageUrl, i) => (
+        {products?.map((imageUrl, i) => (
           <div key={i} style={{ flex: '0 0  auto', scrollSnapAlign: 'start' }}>
             <div className="flex flex-col  rounded-[16px] border-2 overflow-hidden">
               <img src={imageUrl?.images[0]?.url} alt={`Imag ${i + 1}`} className="w-[150px] h-48 object-cover rounded-md" />
