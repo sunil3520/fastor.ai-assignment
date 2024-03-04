@@ -2,7 +2,7 @@ import React from "react";
 
 const Label = ({ isSignIn }) => {
   return (
-    <div className=" w-[95%] flex flex-col items-left">
+    <div className=" w-[95%] flex flex-col items-left lg:w-[30%] item-start">
       {isSignIn ? (
         <div>
           <p className="font-Urbanist text-[26px] font-bold text-[#1E232C]">

@@ -33,6 +33,7 @@ export const signup = (userData) => async(dispatch) =>{
     let res = await axios.post(`https://staging.fastor.in/v1/pwa/user/register`,userData)
     console.log(res.data);
     dispatch(signup_success(res.data));
+    return Promise.resolve(res.data)
    } catch (error) {
     dispatch(signup_failure())
    }
@@ -46,6 +47,7 @@ export const login = (userData) => async(dispatch) =>{
     console.log(res?.data,"res from login");
     setToLocalStorage("token",res?.data?.data.token)
     dispatch(login_success(res?.data));
+    return Promise.resolve(res?.data);
  } catch (error) {
     dispatch(login_failure());
  }

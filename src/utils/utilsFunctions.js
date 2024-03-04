@@ -8,3 +8,8 @@ export const setToLocalStorage = (id,value) =>{
 export const getFromLocalStorage = (id) =>{
    return JSON.parse(localStorage.getItem(id))
 }
+
+
+export const removeTokenFromLocalStorage = (id) =>{
+   localStorage.removeItem(id);
+}
